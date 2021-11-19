@@ -5,3 +5,328 @@
 @import 'global';
 
 
+
+.header {
+  background-image: url(../images/header.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 700px;
+  background-position: top center;
+  color: #fff;
+padding-top: 47px;
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 105px;
+  }
+  &__content {
+    position: relative;
+  }
+  &__title {
+    font-size: 72px;
+    font-weight: 400;
+    text-transform: uppercase;
+  }
+  &__subtitle {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 85px;
+    margin-bottom: 30px;
+  }
+  &__text {
+    margin-bottom: 35px;
+  }
+  
+  &__images {
+    position: absolute;
+    right: 0;
+    bottom: -300px;
+  }
+}
+.social {
+    padding: 70px 0 60px 65px;
+  }
+  .social__img {
+    display: inline-block;
+       }
+   .social__link {
+    margin-right: 10px;
+  }
+.phone {
+  font-size: 36px;
+  line-height: 53px;
+  text-transform: uppercase;
+}
+.button {
+  font-size: 14px;
+  line-height: 21px;
+  background-color: $akcent;
+  padding: 15px 55px;
+  text-transform: uppercase;
+  transition: all .5s;
+  &:hover{
+    color: $akcent;
+    background-color: $default;
+  }
+}
+.title {
+  color: $firm;
+  font-size: 36px;
+  line-height: 54px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-bottom: 50px;
+  position: relative;
+  &::after{
+    content:'';
+    position: absolute;
+    background-color: $firm;
+    height: 3px;
+    width: 80px;
+    top: 25px;
+    margin-left: 20px;
+  }
+}
+.services {
+  padding-top: 350px;
+  &__inner {
+    display: flex;
+    padding-bottom: 100px;
+  }
+  &__content {
+   width: 505px;
+    margin-right: 96px;
+  }
+    &__content-title {
+    color: $akcent;
+    line-height: 27px;
+    font-weight: 300;
+    font-size: 18px;
+    margin-bottom: 12px;
+  }
+  &__content-textbox {
+    margin-bottom: 57px;
+  }
+  &__content-text {
+    margin-bottom: 12px;
+  }
+  &__list {
+    list-style: none;
+    counter-reset: my-counter;
+  }
+  &__item {
+    counter-increment: my-counter;
+    border: 1px solid $grey;
+    margin-bottom: 12px;
+    width: 450px;
+    padding: 10px 15px 10px 113px;
+    position: relative;
+    transition: all .5s;
+    &::before{
+      content: '0' counter(my-counter);
+      position: absolute;
+      left: 20px;
+      font-size: 36px;
+      line-height: 54px;
+      font-weight: 400px;
+      color: $grey;
+      transform: rotate(270deg);
+      transition: all .5s;
+    }
+    &:hover{
+      border: 2px solid $akcent;
+      width: 500px;
+    }
+    &:hover .services__item-title{
+      color: $akcent;
+      
+    }
+    &:hover::before{
+      color: $akcent;
+      
+    }
+  }
+  &__item-title {
+    font-size: 24px;
+    font-weight: 300;
+  }
+.button--decor {
+  margin-top: -7px;
+  border: 1px solid $akcent;
+  position: relative;
+&::after{
+  position: absolute;
+  content: 'Жми';
+  color: $firm;
+  margin-left: 130px;
+}
+&::before{
+  position: absolute;
+  content: '';
+  height: 2px;
+  width: 80px;
+  background-color: $firm;
+  margin-left: 180px;
+  top: 21px;
+      }
+  }
+}
+
+.benefits {
+  color: $default;
+    &__inner {
+    display: flex;
+    margin-bottom: 100px;
+  }
+  &__images {
+    margin-right: 95px;
+  }
+  &__content {
+    width: 100%;
+  }
+  &__title {
+    margin-left: 185px;
+  }
+  &__list {
+    background-color: $firm;
+    padding: 25px 0px 25px 185px !important;
+  }
+  &__item {
+    width: 320px;
+    margin-bottom: 20px;
+  }
+  &__item-num {
+    font-size: 36px;
+    line-height: 54px;
+    font-weight: 400;
+  }
+  &__item-title {
+    font-size: 24px;
+    line-height: 36px;
+    font-weight: 300;
+  }
+  &__item-text {
+    color: $grey;
+  }
+}
+
+
+
+.carousel {
+  margin-bottom: 100px;
+ 
+  &__item-box {
+    border: 1px solid $grey;
+    padding:6px 6px 16px 6px;
+    margin: 0 7px;
+    text-align: center;
+    transition: all .5s;
+      &:hover{
+      color: $default;
+      background-color: $akcent;
+      border-color: $akcent;
+    }
+  }
+  &__item-img {
+    width: 100%;
+    margin-bottom: 23px;
+      }
+  &__item-title {
+    font-weight: 300;
+    margin-bottom: 5px;
+  }
+  
+}
+.carousel .slick-dots{
+  display: flex;
+  justify-content: center;
+   margin-top: 50px;
+   & button{
+     margin: 0 10px;
+     height: 1px;
+     width: 50px;
+     background-color: $grey;
+     font-size: 0;
+     border: none;
+     cursor: pointer;
+   }
+}
+.carousel .slick-active button{
+  background-color: $akcent;
+  height: 3px;
+}
+
+
+
+
+.contacts {
+  
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  &__item {
+    margin-bottom: 20px;
+  }
+  &__item-title {
+    color: $akcent;
+  }
+  
+  &__form {
+    background-color: $firm;
+    padding: 50px 75px 57px;
+    color: #fff;
+    text-align: center;
+  }
+  &__title {
+    color: #fff;
+    margin-bottom: 16px;
+    text-align: left;
+    margin-left: 53px;
+        &::after{
+      background-color: #fff;
+      
+    }
+  }
+  &__input {
+    width: 450px;
+    background-color: transparent;
+    height: 75px;
+    color: #fff;
+    margin-bottom: 12px;
+    display: block;
+    border: 1px solid #fff;
+    font-size: 24px;
+    padding: 0 15px;
+    &::placeholder{
+      text-align: center;
+      font-size: 18px;
+      line-height: 27px;
+      font-weight: 300;
+    }
+  }
+  &__btn {
+  border: none;
+  color: #fff;
+  margin-top: 78px;
+  cursor: pointer;
+  }
+}
+
+
+// footer
+.footer {
+  background-color: $firm;
+  &__inner {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    padding: 20px 0;
+  }
+}
+
+@import 'media';
